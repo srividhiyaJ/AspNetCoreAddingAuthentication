@@ -19,14 +19,14 @@ namespace WishList.Controllers
         }
         [HttpGet]
         [AllowAnonymous]
-        public ActionResult Register()
+        public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Register(RegisterViewModel model)
+        public IActionResult Register(RegisterViewModel model)
         {
             if(!ModelState.IsValid)
                 return View(model);
